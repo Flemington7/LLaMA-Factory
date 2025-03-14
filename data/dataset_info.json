@@ -1,4 +1,30 @@
 {
+  "tensor-hard-coded-10x": {
+    "hf_hub_url": "Flemington7/tensor-hard-coded-10x",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "aipunk-hard-coded-10x": {
+    "hf_hub_url": "Flemington7/aipunk-hard-coded-10x",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "identity": {
     "file_name": "identity.json"
   },

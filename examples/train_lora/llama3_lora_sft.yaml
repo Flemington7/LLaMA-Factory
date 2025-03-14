@@ -1,16 +1,16 @@
 ### model
-model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+model_name_or_path: /autox-dl/deeplearning/users/wentaoye/huggingface/hub/Llama-3.1-8B
 trust_remote_code: true
 
 ### method
 stage: sft
 do_train: true
 finetuning_type: lora
-lora_rank: 8
+lora_rank: 64
 lora_target: all
 
 ### dataset
-dataset: identity,alpaca_en_demo
+dataset: autox_4_hard_coded_10x
 template: llama3
 cutoff_len: 2048
 max_samples: 1000
@@ -18,7 +18,7 @@ overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: saves/llama3-8b/lora/sft
+output_dir: saves/llama3-8b/lora/sft_v3
 logging_steps: 10
 save_steps: 500
 plot_loss: true
@@ -26,14 +26,13 @@ overwrite_output_dir: true
 
 ### train
 per_device_train_batch_size: 1
-gradient_accumulation_steps: 8
+gradient_accumulation_steps: 16
 learning_rate: 1.0e-4
-num_train_epochs: 3.0
+num_train_epochs: 512.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
 ddp_timeout: 180000000
-
 ### eval
 # eval_dataset: alpaca_en_demo
 # val_size: 0.1
